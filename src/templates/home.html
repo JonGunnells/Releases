@@ -15,7 +15,9 @@
 <br>
 
 <form action="/create-mob" method="post">
-    <input type="text" name="mob" size="25" placeholder="Add a Mob"/>
+    <input type="text" name="mob" size="20" placeholder="Add a Mob"/>
+    <input type="text" name="location" size="20" placeholder="Add a Location"/>
+    <input type="text" name="threat" size="20" placeholder="Threat Level"/>
     <button type="submit">Add</button>
 </form>
 <br>
@@ -35,7 +37,7 @@
 
 <ol>
     {{#mobs}}
-    <li><b>{{mob}}</b> </li>
+    <li><b>{{mob}}--{{location}}--{{threat}}</b> </li>
     {{/mobs}}
 
 </ol>

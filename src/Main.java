@@ -61,8 +61,9 @@ public class Main {
                     if (username == null) {
                         throw new Exception("Not logged in");
                     }
-
                     String mb = request.queryParams("mob");
+                    String location = request.queryParams("location");
+                    String threat = request.queryParams("threat");
                     if (mb == null) {
                         throw new Exception("invalid form fields");
                     }
@@ -72,7 +73,7 @@ public class Main {
                         throw new Exception("User does not exist");
                     }
 
-                    Mob r = new Mob(mb);
+                    Mob r = new Mob(mb, location, threat);
                     user.mobs.add(r);
 
                     response.redirect("/");
