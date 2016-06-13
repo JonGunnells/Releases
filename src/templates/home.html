@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Mob Tracker</title>
+
+</head>
+<body background="http://wallpapercave.com/wp/RSiXc6t.png">
+
+
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+
+</form>
+<br>
+
+<form action="/create-mob" method="post">
+    <input type="text" name="mob" size="30" placeholder="Add a Mob"/>
+    <button type="submit">Add</button>
+</form>
+<br>
+
+<form action="/delete-mob" method="post">
+    <input type="number" name="id" placeholder="Mob ID #"/>
+    <button type="submit">Delete</button>
+
+</form>
+<br>
+<form action="/edit-mob" method="post">
+    <input type="number" name="mobEdit" placeholder="Mob ID #"/>
+    <input type="text" name="mobField" size="30" placeholder="Edit Mob"/>
+    <button type="submit">Edit</button>
+
+</form>
+
+<ol>
+    {{#mobs}}
+    <li><b>{{mob}}</b> </li>
+    {{/mobs}}
+
+</ol>
+</body>
+</html>
