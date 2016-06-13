@@ -22,7 +22,7 @@ public class Main {
                         return new ModelAndView(m, "login.html");
                     } else {
                         User user = users.get(username);
-                        m.put("messages", user.mobs);
+                        m.put("mobs", user.mobs);
                         return new ModelAndView(m, "home.html");
                     }
                 },
